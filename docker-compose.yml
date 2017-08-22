@@ -1,0 +1,11 @@
+rabbitmq:
+     container_name: "my-rabbit"
+     hostname: rabbit
+     image: rabbitmq:3-management
+     environment:
+        - RABBITMQ_DEFAULT_VHOST=vhost
+     volumes:
+        - rabbit-volume:/var/lib/rabbitmq
+     ports:
+        - "5672:5672"
+        - "15672:15672"
